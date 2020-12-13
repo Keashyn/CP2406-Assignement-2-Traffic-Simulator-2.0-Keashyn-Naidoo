@@ -9,7 +9,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 
-class EditorPanel extends JPanel {
+public class EditorPanel extends JPanel {
 
     private ArrayList<Road> roads;
     private ArrayList<TrafficLight> lights;
