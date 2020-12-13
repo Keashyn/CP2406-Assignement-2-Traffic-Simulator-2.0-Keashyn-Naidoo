@@ -1,10 +1,11 @@
+package Test;
+
 import Model.Road;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 
 import static org.junit.Assert.assertArrayEquals;
-import static org.junit.Assert.assertEquals;
 
 class RoadTest {
     Model.Road road = new Model.Road("0", 1, 5, new int[]{0, 0}, Road.Orientation.HORIZONTAL);
