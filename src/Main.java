@@ -16,7 +16,7 @@ public class Main {
 
     public static void main(String[] args) {
         // Simulation Window setup:
-        JFrame mainWindow = new JFrame("Traffic Simulator");
+        JFrame mainWindow = new JFrame("Traffic Simulator-by keashyn naidoo");
         mainWindow.setLayout(new BorderLayout());
         mainWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         mainWindow.setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
