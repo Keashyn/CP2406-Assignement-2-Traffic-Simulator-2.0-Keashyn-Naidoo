@@ -14,7 +14,7 @@ public class SimulationPanel extends JPanel {
         STOPPED, RUNNING, FINISHED
     }
 
-    private State state = State.STOPPED;
+    private State state = State. STOPPED;
     private int scale;
     private ArrayList<Road> roads;
     private ArrayList<Vehicle> vehicles = new ArrayList<>();
