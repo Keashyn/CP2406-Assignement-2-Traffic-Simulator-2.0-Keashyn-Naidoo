@@ -15,7 +15,7 @@ public class City_Content extends JPanel{
     public void paint(Graphics g) {
         super.paintComponent(g);
 
-        g.setColor(Color.BLACK);
+        g.setColor(Color.GRAY);
         g.fillRect(350, 0, 50, 600);
 
         g.setColor(Color.WHITE);
@@ -24,7 +24,7 @@ public class City_Content extends JPanel{
                 g.fillRect(375, b, 5, 30);
             }
         }
-        g.setColor(Color.BLACK);
+        g.setColor(Color.GRAY);
         g.fillRect(0, 100, 870, 50);
 
         g.setColor(Color.WHITE);
@@ -33,7 +33,7 @@ public class City_Content extends JPanel{
                 g.fillRect(b, 120, 30, 5);
             }
         }
-        g.setColor(Color.BLACK);
+        g.setColor(Color.GRAY);
         g.fillRect(0, 400, 870, 50);
 
         g.setColor(Color.WHITE);
@@ -42,7 +42,7 @@ public class City_Content extends JPanel{
                 g.fillRect(b, 420, 30, 5);
             }
         }
-        g.setColor(Color.BLACK);
+        g.setColor(Color.GRAY);
         g.fillRect(150, 400, 50, 600);
 
         g.setColor(Color.WHITE);
@@ -51,7 +51,7 @@ public class City_Content extends JPanel{
                 g.fillRect(173, b, 5, 30);
             }
         }
-        g.setColor(Color.BLACK);
+        g.setColor(Color.GRAY);
         g.fillRect(650, 400, 50, 600);
 
         g.setColor(Color.WHITE);

@@ -22,7 +22,7 @@ public class Traffics{
 
     public void paintMe(Graphics g) {
         if (!turn) {
-            g.setColor(Color.YELLOW);
+            g.setColor(Color.BLACK);
             g.fillRect(x, y, 10, 40);
 
             if (this.red) {
@@ -34,7 +34,7 @@ public class Traffics{
 
             }
         } else {
-            g.setColor(Color.YELLOW);
+            g.setColor(Color.BLACK);
             g.fillRect(x, y, 40, 10);
             if (this.red) {
                 g.setColor(Color.RED);
