@@ -1,1 +1,1 @@
-public class Traffic_Simulator
+public class Traffic_Simulator;
