@@ -1,34 +1,29 @@
 import java.awt.*;
 
-public class TrafficLight{
+public class Traffics{
     int x=0, y=0;
     boolean red= false;
     boolean green= false;
-    boolean orange= false;
     boolean turn= false;
 
-    public TrafficLight(int x, int y, boolean Red, boolean Green, boolean Orange, boolean turn) {
+    public Traffics(int x, int y, boolean Red, boolean Green, boolean turn) {
         this.x = x;
         this.y = y;
         this.red = Red;
         this.green = Green;
-        this.orange= Orange;
+
         this.turn = turn;
     }
-
-    public TrafficLight(int x, int y, boolean red, boolean green, boolean orange) {
-    }
-
-    public void setStatus(boolean Red, boolean Green, boolean Orange) {
+    public void setStatus(boolean Red, boolean Green) {
       this.red = Red;
       this.green = Green;
-      this.orange = Orange;
+
     }
 
     public void paintMe(Graphics g) {
         if (!turn) {
-            g.setColor(Color.BLACK);
-            g.fillRect(x, y, 20, 40);
+            g.setColor(Color.YELLOW);
+            g.fillRect(x, y, 10, 40);
 
             if (this.red) {
                 g.setColor(Color.RED);
@@ -39,19 +34,19 @@ public class TrafficLight{
 
             }
         } else {
-            g.setColor(Color.BLACK);
+            g.setColor(Color.YELLOW);
             g.fillRect(x, y, 40, 10);
             if (this.red) {
                 g.setColor(Color.RED);
                 g.fillOval(x + 10, y + 1, 8, 8);
             } else {
-                g.setColor(Color.ORANGE);
+                g.setColor(Color.GREEN);
                 g.fillOval(this.x + 10, this.y + 1, 8, 8);
             }
 
         }
     }
 
-    public void setStatus(boolean b, boolean b1) {
+
     }
-}
+

@@ -3,41 +3,41 @@ import java.awt.*;
 import java.util.ArrayList;
 
 public class Create extends JPanel{
-    int NumberRoad=0;
-    String Citynames="";
-    int laneHeights=300;
-    ArrayList<Vehicle> Vehicle_Containers =new ArrayList<>();
-    ArrayList<TrafficLight> Traffic_Containers=new ArrayList<>();
+    int NumRoad=0;
+    String Cityname="";
+    int laneHeight=300;
+    ArrayList<Vehicle> Vehicle_Container =new ArrayList<>();
+    ArrayList<Traffics> Traffic_Container=new ArrayList<>();
 
     public Create(String n,int NumberRoad){
         setBackground(Color.WHITE);
         setSize(855,590);
         setLayout(null);
         setVisible(true);
-        this.Citynames =n;
-        this.NumberRoad=NumberRoad;
+        this.Cityname =n;
+        this.NumRoad=NumberRoad;
     }
-    public void addVehicle(Vehicle vehicle){Vehicle_Containers.add(vehicle);}
-    public void addTraffic(TrafficLight trafficLight){Traffic_Containers.add(trafficLight);}
+    public void addVehicle(Vehicle vehicle){Vehicle_Container.add(vehicle);}
+    public void addTraffic(Traffics trafficLight){Traffic_Container.add(trafficLight);}
     public void paint(Graphics g) {
         super.paintComponent(g);
 
-        if (NumberRoad <= 2) {
+        if (NumRoad <= 2) {
             g.setColor(Color.BLACK);
             g.fillRect(0, 100, 870, 50);
 
             g.setColor(Color.WHITE);
-            for (int a = laneHeights; a < laneHeights * 4; a = a + laneHeights) {
+            for (int a = laneHeight; a < laneHeight * 4; a = a + laneHeight) {
                 for (int b = 0; b < getWidth(); b += 40) {
                     g.fillRect(b, 120, 30, 5);
                 }
             }
-        } else if (NumberRoad <= 4) {
+        } else if (NumRoad <= 4) {
             g.setColor(Color.BLACK);
             g.fillRect(0, 100, 870, 50);
 
             g.setColor(Color.WHITE);
-            for (int a = laneHeights; a < laneHeights * 4; a = a + laneHeights) {
+            for (int a = laneHeight; a < laneHeight * 4; a = a + laneHeight) {
                 for (int b = 0; b < getWidth(); b += 40) {
                     g.fillRect(b, 120, 30, 5);
                 }
@@ -46,17 +46,17 @@ public class Create extends JPanel{
             g.fillRect(350, 0, 50, 600);
 
             g.setColor(Color.WHITE);
-            for (int a = laneHeights; a < laneHeights * 4; a = a + laneHeights) {
+            for (int a = laneHeight; a < laneHeight * 4; a = a + laneHeight) {
                 for (int b = 0; b < getHeight(); b += 40) {
                     g.fillRect(375, b, 5, 30);
                 }
             }
-        } else if (NumberRoad <= 6) {
+        } else if (NumRoad <= 6) {
             g.setColor(Color.BLACK);
             g.fillRect(0, 100, 870, 50);
 
             g.setColor(Color.WHITE);
-            for (int a = laneHeights; a < laneHeights * 4; a = a + laneHeights) {
+            for (int a = laneHeight; a < laneHeight * 4; a = a + laneHeight) {
                 for (int b = 0; b < getWidth(); b += 40) {
                     g.fillRect(b, 120, 30, 5);
                 }
@@ -65,7 +65,7 @@ public class Create extends JPanel{
             g.fillRect(350, 0, 50, 600);
 
             g.setColor(Color.WHITE);
-            for (int a = laneHeights; a < laneHeights * 4; a = a + laneHeights) {
+            for (int a = laneHeight; a < laneHeight * 4; a = a + laneHeight) {
                 for (int b = 0; b < getHeight(); b += 40) {
                     g.fillRect(375, b, 5, 30);
                 }
@@ -74,17 +74,17 @@ public class Create extends JPanel{
             g.fillRect(0, 400, 870, 50);
 
             g.setColor(Color.WHITE);
-            for (int a = laneHeights; a < laneHeights * 4; a = a + laneHeights) {
+            for (int a = laneHeight; a < laneHeight * 4; a = a + laneHeight) {
                 for (int b = 0; b < getWidth(); b += 40) {
                     g.fillRect(b, 420, 30, 5);
                 }
             }
-        } else if (NumberRoad <= 10) {
+        } else if (NumRoad <= 10) {
             g.setColor(Color.BLACK);
             g.fillRect(0, 100, 870, 50);
 
             g.setColor(Color.WHITE);
-            for (int a = laneHeights; a < laneHeights * 4; a = a + laneHeights) {
+            for (int a = laneHeight; a < laneHeight * 4; a = a + laneHeight) {
                 for (int b = 0; b < getWidth(); b += 40) {
                     g.fillRect(b, 120, 30, 5);
                 }
@@ -93,7 +93,7 @@ public class Create extends JPanel{
             g.fillRect(350, 0, 50, 600);
 
             g.setColor(Color.WHITE);
-            for (int a = laneHeights; a < laneHeights * 4; a = a + laneHeights) {
+            for (int a = laneHeight; a < laneHeight * 4; a = a + laneHeight) {
                 for (int b = 0; b < getHeight(); b += 40) {
                     g.fillRect(375, b, 5, 30);
                 }
@@ -102,7 +102,7 @@ public class Create extends JPanel{
             g.fillRect(0, 400, 870, 50);
 
             g.setColor(Color.WHITE);
-            for (int a = laneHeights; a < laneHeights * 4; a = a + laneHeights) {
+            for (int a = laneHeight; a < laneHeight * 4; a = a + laneHeight) {
                 for (int b = 0; b < getWidth(); b += 40) {
                     g.fillRect(b, 420, 30, 5);
                 }
@@ -111,7 +111,7 @@ public class Create extends JPanel{
             g.fillRect(150, 400, 50, 600);
 
             g.setColor(Color.WHITE);
-            for (int a = laneHeights; a < laneHeights * 4; a = a + laneHeights) {
+            for (int a = laneHeight; a < laneHeight * 4; a = a + laneHeight) {
                 for (int b = 430; b < getHeight(); b += 40) {
                     g.fillRect(173, b, 5, 30);
                 }
@@ -120,23 +120,23 @@ public class Create extends JPanel{
             g.fillRect(650, 400, 50, 600);
 
             g.setColor(Color.WHITE);
-            for (int a = laneHeights; a < laneHeights * 4; a = a + laneHeights) {
+            for (int a = laneHeight; a < laneHeight * 4; a = a + laneHeight) {
                 for (int b = 430; b < getHeight(); b += 40) {
                     g.fillRect(673, b, 5, 30);
                 }
             }
         }
 
-        for (int a = 0; a < Traffic_Containers.size(); a++) {
-            Traffic_Containers.get(a).paintMe(g);
+        for (int a = 0; a < Traffic_Container.size(); a++) {
+            Traffic_Container.get(a).paintMe(g);
         }
 
-        for (int a = 0; a < Vehicle_Containers.size(); a++) {
-            Vehicle_Containers.get(a).paintMe(g);
+        for (int a = 0; a < Vehicle_Container.size(); a++) {
+            Vehicle_Container.get(a).paintMe(g);
         }
     }  public void Move() {
-        for(int i = 0; i< Vehicle_Containers.size(); i++) {
-            Vehicle vehicle = Vehicle_Containers.get(i);
+        for(int i = 0; i< Vehicle_Container.size(); i++) {
+            Vehicle vehicle = Vehicle_Container.get(i);
 
             if (vehicle.turn1 & !vehicle.road.equals("in")) {
                 vehicle.setY(vehicle.getY() + vehicle.getSpeed());
@@ -174,16 +174,16 @@ public class Create extends JPanel{
                     } else if (vehicle.signal.equals("s8")) {
                         count = 7;
                     }
-                    if (Traffic_Containers.size() != 0) {
+                    if (Traffic_Container.size() != 0) {
                         if (count == 0) {
-                            Traffic_Containers.get(count).setStatus(false,true);
+                            Traffic_Container.get(count).setStatus(false,true);
                         } else {
-                            if (Traffic_Containers.size() == 5 & count == 5) {
-                                Traffic_Containers.get(count - 2).setStatus(true, false);
-                                Traffic_Containers.get(count - 1).setStatus(false, true);
+                            if (Traffic_Container.size() == 5 & count == 5) {
+                                Traffic_Container.get(count - 2).setStatus(true, false);
+                                Traffic_Container.get(count - 1).setStatus(false, true);
                             } else {
-                                Traffic_Containers.get(count - 1).setStatus(true, false);
-                                Traffic_Containers.get(count).setStatus(false,true);
+                                Traffic_Container.get(count - 1).setStatus(true, false);
+                                Traffic_Container.get(count).setStatus(false,true);
                             }
 
                         }

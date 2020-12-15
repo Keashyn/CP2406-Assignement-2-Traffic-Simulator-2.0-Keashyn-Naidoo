@@ -6,10 +6,9 @@ import javax.swing.border.EmptyBorder;
 
 public class Traffic_Simulator extends JFrame implements Runnable,ActionListener {
     private Vehicle Vehicle_Containers[]=new Vehicle[30];
-    private Create CityContainers[]=new Create[5];
+    private Create CityContainer[]=new Create[5];
 
     private City_Content City =new City_Content();
-    private TrafficLight traffic;
     boolean running=false;
     boolean open =false;
 
@@ -38,8 +37,6 @@ public class Traffic_Simulator extends JFrame implements Runnable,ActionListener
     }
     public Traffic_Simulator() {
         setTitle("Traffic Simulator by Keashyn Naidoo");
-        ImageIcon icon = new ImageIcon("C:\\Users\\Rlakkys\\Desktop\\Codes\\Software\\Car-Simulator\\Codes\\icon.png");
-        setIconImage(icon.getImage());
         setResizable(false);
         setVisible(true);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -171,16 +168,16 @@ public class Traffic_Simulator extends JFrame implements Runnable,ActionListener
                     VehicleNum.setVisible(true);
                     Value.setVisible(false);
                     Create create=new Create(name,roads);
-                    CityContainers[city]=create;
+                    CityContainer[city]=create;
                     j.showMessageDialog(contentPane, "You have succesfully created "+name+".");
                     CityName.setText("City Name : "+name);
                     City.setVisible(false);
-                    contentPane.add(CityContainers[city]);
+                    contentPane.add(CityContainer[city]);
                     for(int i=0;i<city;i++) {
-                        CityContainers[i].setVisible(false);
+                        CityContainer[i].setVisible(false);
                     }
-                    addTraffic(CityContainers[city].NumberRoad,city);
-                    CityContainers[city].setVisible(true);
+                    addTraffic(CityContainer[city].NumRoad,city);
+                    CityContainer[city].setVisible(true);
                     city++;
 
                 }
@@ -205,16 +202,16 @@ public class Traffic_Simulator extends JFrame implements Runnable,ActionListener
                     String name=j.showInputDialog("Enter your city name");
                     int i=0;
                     while(i!=city) {
-                        if(CityContainers[i].Citynames.equalsIgnoreCase(name)) {
+                        if(CityContainer[i].Cityname.equalsIgnoreCase(name)) {
                             int roads=Integer.parseInt(j.showInputDialog("Enter new number of Roads "));
-                            CityContainers[i].NumberRoad =roads;
-                            JOptionPane.showMessageDialog(contentPane, CityContainers[i].Citynames +" Edited succesfully!");
+                            CityContainer[i].NumRoad =roads;
+                            JOptionPane.showMessageDialog(contentPane, CityContainer[i].Cityname +" Edited succesfully!");
                             for(int m=0;m<city;m++) {
-                                CityContainers[m].setVisible(false);
+                                CityContainer[m].setVisible(false);
                             }
-                            CityContainers[i].Traffic_Containers.clear();
+                            CityContainer[i].Traffic_Container.clear();
                             addTraffic(roads,i);
-                            CityContainers[i].setVisible(true);
+                            CityContainer[i].setVisible(true);
                         }
                         i++;
                     }
@@ -232,11 +229,11 @@ public class Traffic_Simulator extends JFrame implements Runnable,ActionListener
                 if(city>0) {
                     String name=JOptionPane.showInputDialog("Enter your city name");
                     for(int i=0;i<city;i++) {
-                        if(CityContainers[i].Citynames.equalsIgnoreCase(name)) {
+                        if(CityContainer[i].Cityname.equalsIgnoreCase(name)) {
                             open=true;
-                            index= CityContainers[i].NumberRoad;
+                            index= CityContainer[i].NumRoad;
                             i=i;
-                            CityContainers[i].setVisible(true);
+                            CityContainer[i].setVisible(true);
                             RunBut.setVisible(true);
                             StopBut.setVisible(true);
 
@@ -244,7 +241,7 @@ public class Traffic_Simulator extends JFrame implements Runnable,ActionListener
                             EditCityBut.setVisible(false);
                             CreateCityBut.setVisible(false);
                             ModeText.setText("Mode: Simulation");
-                            CityName.setText("City:"+ CityContainers[i].Citynames);
+                            CityName.setText("City:"+ CityContainer[i].Cityname);
                             CityName.setVisible(true);
                             VehicleNum.setVisible(true);
                             Value.setVisible(true);
@@ -276,52 +273,52 @@ public class Traffic_Simulator extends JFrame implements Runnable,ActionListener
         if(index>0 & index<=2) {
         }
         else if(index>2 & index<=4) {
-            CityContainers[i].addTraffic(new TrafficLight(310,117,true,false,true));
-            CityContainers[i].addTraffic(new TrafficLight(372, 60,true,false,false));
-            CityContainers[i].addTraffic(new TrafficLight(372, 150,true,false,false));
-            CityContainers[i].addTraffic(new TrafficLight(395, 117,true,false,true));
+            CityContainer[i].addTraffic(new Traffics(310,117,true,false,true));
+            CityContainer[i].addTraffic(new Traffics(372, 60,true,false,false));
+            CityContainer[i].addTraffic(new Traffics(372, 150,true,false,false));
+            CityContainer[i].addTraffic(new Traffics(395, 117,true,false,true));
         }
         else if(index>4 & index<=6) {
-            CityContainers[i].addTraffic(new TrafficLight(310, 117,true,false,true));
-            CityContainers[i].addTraffic(new TrafficLight(372, 60,true,false,false));
-            CityContainers[i].addTraffic(new TrafficLight(372, 150,true,false,false));
-            CityContainers[i].addTraffic(new TrafficLight(395, 117,true,false,true));
-            CityContainers[i].addTraffic(new TrafficLight(372, 445,true,false,false));
+            CityContainer[i].addTraffic(new Traffics(310, 117,true,false,true));
+            CityContainer[i].addTraffic(new Traffics(372, 60,true,false,false));
+            CityContainer[i].addTraffic(new Traffics(372, 150,true,false,false));
+            CityContainer[i].addTraffic(new Traffics(395, 117,true,false,true));
+            CityContainer[i].addTraffic(new Traffics(372, 445,true,false,false));
         }
         else if(index>6 &  index<=8) {
-            traffic =new TrafficLight(310, 117,true,false,true);
-            CityContainers[i].addTraffic(traffic);
-            traffic =new TrafficLight(372, 60,true,false,false);
-            CityContainers[i].addTraffic(traffic);
+            Traffics traffic = new Traffics(310, 117, true, false, true);
+            CityContainer[i].addTraffic(traffic);
+            traffic =new Traffics(372, 60,true,false,false);
+            CityContainer[i].addTraffic(traffic);
 
-            traffic =new TrafficLight(372, 150,true,false,false);
-            CityContainers[i].addTraffic(traffic);
-            traffic =new TrafficLight(395, 117,true,false,true);
-            CityContainers[i].addTraffic(traffic);
+            traffic =new Traffics(372, 150,true,false,false);
+            CityContainer[i].addTraffic(traffic);
+            traffic =new Traffics(395, 117,true,false,true);
+            CityContainer[i].addTraffic(traffic);
 
-            traffic =new TrafficLight(170, 445,true,false,false);
-            CityContainers[i].addTraffic(traffic);
-            traffic =new TrafficLight(372, 445,true,false,false);
-            CityContainers[i].addTraffic(traffic);
-            traffic =new TrafficLight(672, 445,true,false,false);
-            CityContainers[i].addTraffic(traffic);
+            traffic =new Traffics(170, 445,true,false,false);
+            CityContainer[i].addTraffic(traffic);
+            traffic =new Traffics(372, 445,true,false,false);
+            CityContainer[i].addTraffic(traffic);
+            traffic =new Traffics(672, 445,true,false,false);
+            CityContainer[i].addTraffic(traffic);
         }
         else {
-            City.addTraffic(new TrafficLight(310, 117,true,false,true));
-            City.addTraffic(new TrafficLight(372, 60,true,false,false));
+            City.addTraffic(new Traffics(310, 117,true,false,true));
+            City.addTraffic(new Traffics(372, 60,true,false,false));
 
-            City.addTraffic(new TrafficLight(372, 150,true,false,false));
-            City.addTraffic(new TrafficLight(395, 117,true,false,true));
+            City.addTraffic(new Traffics(372, 150,true,false,false));
+            City.addTraffic(new Traffics(395, 117,true,false,true));
 
-            City.addTraffic(new TrafficLight(170, 445,true,false,false));
-            City.addTraffic(new TrafficLight(372, 445,true,false,false));
-            City.addTraffic(new TrafficLight(672, 445,true,false,false));}
+            City.addTraffic(new Traffics(170, 445,true,false,false));
+            City.addTraffic(new Traffics(372, 445,true,false,false));
+            City.addTraffic(new Traffics(672, 445,true,false,false));}
     }
     public void addVehicle(int index,int i) {
         if(index>0 & index<=2) {
             Vehicle_Containers[total]=new Bus(804, 135);
             Vehicle_Containers[total].turn3();
-            CityContainers[i].addVehicle(Vehicle_Containers[total]);
+            CityContainer[i].addVehicle(Vehicle_Containers[total]);
             total++;
         }
         else if(index>2 & index<=4) {
@@ -329,13 +326,13 @@ public class Traffic_Simulator extends JFrame implements Runnable,ActionListener
             if(a==0) {
                 Vehicle_Containers[total]=new Bus(804, 135);
                 Vehicle_Containers[total].turn3();
-                CityContainers[i].addVehicle(Vehicle_Containers[total]);
+                CityContainer[i].addVehicle(Vehicle_Containers[total]);
                 total++;}
 
             else if(a==1) {
                 Vehicle_Containers[total]=new Car(354, 0);
                 Vehicle_Containers[total].turn1();
-                CityContainers[i].addVehicle(Vehicle_Containers[total]);
+                CityContainer[i].addVehicle(Vehicle_Containers[total]);
                 total++;}
         }
         else if(index>4 & index<=6) {
@@ -343,25 +340,25 @@ public class Traffic_Simulator extends JFrame implements Runnable,ActionListener
             if(a==0) {
                 Vehicle_Containers[total]=new Bus(804, 135);
                 Vehicle_Containers[total].turn3();
-                CityContainers[i].addVehicle(Vehicle_Containers[total]);
+                CityContainer[i].addVehicle(Vehicle_Containers[total]);
                 total++;}
 
             else if(a==1) {
                 Vehicle_Containers[total]=new Car(354, 0);
                 Vehicle_Containers[total].turn1();
-                CityContainers[i].addVehicle(Vehicle_Containers[total]);
+                CityContainer[i].addVehicle(Vehicle_Containers[total]);
                 total++;}
 
             else if(a==2) {
                 Vehicle_Containers[total]=new Bike(385, 580);
                 Vehicle_Containers[total].turn2();
-                CityContainers[i].addVehicle(Vehicle_Containers[total]);
+                CityContainer[i].addVehicle(Vehicle_Containers[total]);
                 total++;}
             else if(a==3) {
 
                 Vehicle_Containers[total]=new Car(0, 404);
 
-                CityContainers[i].addVehicle(Vehicle_Containers[total]);
+                CityContainer[i].addVehicle(Vehicle_Containers[total]);
                 total++;}
         }
         else if(index>6 &  index<=8) {
@@ -369,24 +366,24 @@ public class Traffic_Simulator extends JFrame implements Runnable,ActionListener
             if(a==0) {
                 Vehicle_Containers[total]=new Bus(804, 135);
                 Vehicle_Containers[total].turn3();
-                CityContainers[i].addVehicle(Vehicle_Containers[total]);
+                CityContainer[i].addVehicle(Vehicle_Containers[total]);
                 total++;}
 
             else if(a==1) {
                 Vehicle_Containers[total]=new Car(354, 0);
                 Vehicle_Containers[total].turn1();
-                CityContainers[i].addVehicle(Vehicle_Containers[total]);
+                CityContainer[i].addVehicle(Vehicle_Containers[total]);
                 total++;}
 
             else if(a==2) {
                 Vehicle_Containers[total]=new Bike(385, 580);
                 Vehicle_Containers[total].turn2();
-                CityContainers[i].addVehicle(Vehicle_Containers[total]);
+                CityContainer[i].addVehicle(Vehicle_Containers[total]);
                 total++;}
 
             else if(a==3) {
                 Vehicle_Containers[total]=new Car(0, 404);
-                CityContainers[i].addVehicle(Vehicle_Containers[total]);
+                CityContainer[i].addVehicle(Vehicle_Containers[total]);
                 total++;}
 
             else if(a==4) {
@@ -461,8 +458,8 @@ public class Traffic_Simulator extends JFrame implements Runnable,ActionListener
             }
         }
         while(running & open) {
-            CityContainers[i].Move();
-            CityContainers[i].repaint();
+            CityContainer[i].Move();
+            CityContainer[i].repaint();
             check();
             Value.setText(String.valueOf(total));
             if(count==10 & total!=29) {
