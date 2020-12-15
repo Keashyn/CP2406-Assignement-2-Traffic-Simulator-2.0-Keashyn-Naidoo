@@ -1,4 +1,4 @@
-public class Traffic_Simulator {
+public class Traffic_Simulator{
     public static void main(String[] args) {
     }
 }
