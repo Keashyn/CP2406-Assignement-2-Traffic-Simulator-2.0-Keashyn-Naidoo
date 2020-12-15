@@ -48,4 +48,7 @@ public class TrafficLight{
 
         }
     }
+
+    public void setStatus(boolean b, boolean b1) {
+    }
 }
