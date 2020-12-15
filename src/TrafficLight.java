@@ -16,6 +16,9 @@ public class TrafficLight{
         this.turn = turn;
     }
 
+    public TrafficLight(int x, int y, boolean red, boolean green, boolean orange) {
+    }
+
     public void setStatus(boolean Red, boolean Green, boolean Orange) {
       this.red = Red;
       this.green = Green;
