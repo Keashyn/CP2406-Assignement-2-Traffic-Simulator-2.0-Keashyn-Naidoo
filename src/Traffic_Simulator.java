@@ -273,46 +273,46 @@ public class Traffic_Simulator extends JFrame implements Runnable,ActionListener
         if(index>0 & index<=2) {
         }
         else if(index>2 & index<=4) {
-            CityContainer[i].addTraffic(new Traffics(310,117,true,false,true));
-            CityContainer[i].addTraffic(new Traffics(372, 60,true,false,false));
-            CityContainer[i].addTraffic(new Traffics(372, 150,true,false,false));
-            CityContainer[i].addTraffic(new Traffics(395, 117,true,false,true));
+            CityContainer[i].addTraffic(new TrafficLight(310,117,true,false,true));
+            CityContainer[i].addTraffic(new TrafficLight(372, 60,true,false,false));
+            CityContainer[i].addTraffic(new TrafficLight(372, 150,true,false,false));
+            CityContainer[i].addTraffic(new TrafficLight(395, 117,true,false,true));
         }
         else if(index>4 & index<=6) {
-            CityContainer[i].addTraffic(new Traffics(310, 117,true,false,true));
-            CityContainer[i].addTraffic(new Traffics(372, 60,true,false,false));
-            CityContainer[i].addTraffic(new Traffics(372, 150,true,false,false));
-            CityContainer[i].addTraffic(new Traffics(395, 117,true,false,true));
-            CityContainer[i].addTraffic(new Traffics(372, 445,true,false,false));
+            CityContainer[i].addTraffic(new TrafficLight(310, 117,true,false,true));
+            CityContainer[i].addTraffic(new TrafficLight(372, 60,true,false,false));
+            CityContainer[i].addTraffic(new TrafficLight(372, 150,true,false,false));
+            CityContainer[i].addTraffic(new TrafficLight(395, 117,true,false,true));
+            CityContainer[i].addTraffic(new TrafficLight(372, 445,true,false,false));
         }
         else if(index>6 &  index<=8) {
-            Traffics traffic = new Traffics(310, 117, true, false, true);
+            TrafficLight traffic = new TrafficLight(310, 117, true, false, true);
             CityContainer[i].addTraffic(traffic);
-            traffic =new Traffics(372, 60,true,false,false);
-            CityContainer[i].addTraffic(traffic);
-
-            traffic =new Traffics(372, 150,true,false,false);
-            CityContainer[i].addTraffic(traffic);
-            traffic =new Traffics(395, 117,true,false,true);
+            traffic =new TrafficLight(372, 60,true,false,false);
             CityContainer[i].addTraffic(traffic);
 
-            traffic =new Traffics(170, 445,true,false,false);
+            traffic =new TrafficLight(372, 150,true,false,false);
             CityContainer[i].addTraffic(traffic);
-            traffic =new Traffics(372, 445,true,false,false);
+            traffic =new TrafficLight(395, 117,true,false,true);
             CityContainer[i].addTraffic(traffic);
-            traffic =new Traffics(672, 445,true,false,false);
+
+            traffic =new TrafficLight(170, 445,true,false,false);
+            CityContainer[i].addTraffic(traffic);
+            traffic =new TrafficLight(372, 445,true,false,false);
+            CityContainer[i].addTraffic(traffic);
+            traffic =new TrafficLight(672, 445,true,false,false);
             CityContainer[i].addTraffic(traffic);
         }
         else {
-            City.addTraffic(new Traffics(310, 117,true,false,true));
-            City.addTraffic(new Traffics(372, 60,true,false,false));
+            City.addTraffic(new TrafficLight(310, 117,true,false,true));
+            City.addTraffic(new TrafficLight(372, 60,true,false,false));
 
-            City.addTraffic(new Traffics(372, 150,true,false,false));
-            City.addTraffic(new Traffics(395, 117,true,false,true));
+            City.addTraffic(new TrafficLight(372, 150,true,false,false));
+            City.addTraffic(new TrafficLight(395, 117,true,false,true));
 
-            City.addTraffic(new Traffics(170, 445,true,false,false));
-            City.addTraffic(new Traffics(372, 445,true,false,false));
-            City.addTraffic(new Traffics(672, 445,true,false,false));}
+            City.addTraffic(new TrafficLight(170, 445,true,false,false));
+            City.addTraffic(new TrafficLight(372, 445,true,false,false));
+            City.addTraffic(new TrafficLight(672, 445,true,false,false));}
     }
     public void addVehicle(int index,int i) {
         if(index>0 & index<=2) {

@@ -7,7 +7,7 @@ public class Create extends JPanel{
     String Cityname="";
     int laneHeight=300;
     ArrayList<Vehicle> Vehicle_Container =new ArrayList<>();
-    ArrayList<Traffics> Traffic_Container=new ArrayList<>();
+    ArrayList<TrafficLight> Traffic_Container=new ArrayList<>();
 
     public Create(String n,int NumberRoad){
         setBackground(Color.WHITE);
@@ -18,7 +18,7 @@ public class Create extends JPanel{
         this.NumRoad=NumberRoad;
     }
     public void addVehicle(Vehicle vehicle){Vehicle_Container.add(vehicle);}
-    public void addTraffic(Traffics trafficLight){Traffic_Container.add(trafficLight);}
+    public void addTraffic(TrafficLight trafficLight){Traffic_Container.add(trafficLight);}
     public void paint(Graphics g) {
         super.paintComponent(g);
 

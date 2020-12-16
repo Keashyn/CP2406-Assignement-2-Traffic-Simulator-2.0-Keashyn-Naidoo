@@ -4,7 +4,7 @@ import java.util.ArrayList;
 public class City_Content extends JPanel{
     int laneHeights =300;
     ArrayList<Vehicle> Vehicle_Containers =new ArrayList<>();
-    ArrayList<Traffics> Traffic_Containers=new ArrayList<>();
+    ArrayList<TrafficLight> Traffic_Containers=new ArrayList<>();
 
     public City_Content(){
         setBackground(Color.WHITE);
@@ -70,7 +70,7 @@ public class City_Content extends JPanel{
     public void addVehicle(Vehicle vehicle) {
         Vehicle_Containers.add(vehicle);
     }
-    public void addTraffic(Traffics trafficLight) {
+    public void addTraffic(TrafficLight trafficLight) {
         Traffic_Containers.add(trafficLight);
     }
     public void Move() {

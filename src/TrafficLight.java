@@ -1,12 +1,12 @@
 import java.awt.*;
 
-public class Traffics{
+public class TrafficLight{
     int x=0, y=0;
     boolean red= false;
     boolean green= false;
     boolean turn= false;
 
-    public Traffics(int x, int y, boolean Red, boolean Green, boolean turn) {
+    public TrafficLight(int x, int y, boolean Red, boolean Green, boolean turn) {
         this.x = x;
         this.y = y;
         this.red = Red;
